@@ -7,15 +7,24 @@
     <title>Lets react to this</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
-    <script type="text/javascript">
+    <div id="dhoom"></div>
+    <script type="text/babel">
         let headingElement = React.createElement("h1", null, "Getting Started once again");
         ReactDOM.render(
-            headingElement,
+            <ul>
+                <li>Live</li>
+                <li>Love</li>
+                <li>Luve</li>
+            </ul>,
             document.getElementById("root")
         );
+        ReactDOM.render(
+            React.createElement("li",{style: {blue}}, )
+        )
     </script>
 </body>
 </html>
