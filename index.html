@@ -13,17 +13,30 @@
     <div id="root"></div>
     <div id="dhoom"></div>
     <script type="text/babel">
-        let headingElement = React.createElement("h1", null, "Getting Started once again");
+        function Header(props) {
+            const [a,b] = useState("yash");
+            return (
+                <header>
+                    <h1>Hello, its </h1>
+                </header>
+            );
+        }
+        function App() {
+            return (<div>
+                <img 
+                    src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/steve-grand-and-lucy-mark-thomasscience-photo-library.jpg"
+                    height={200}
+                />
+                <Header propert1="Size Btao Apna" property2="7" />
+            </div>);
+        }
         ReactDOM.render(
-            <ul>
-                <li>Live</li>
-                <li>Love</li>
-                <li>Luve</li>
-            </ul>,
+            <App />,
             document.getElementById("root")
         );
         ReactDOM.render(
-            React.createElement("li",{style: {blue}}, )
+            React.createElement("h5",null, "Rendered another one"),
+            document.getElementById("dhoom")
         )
     </script>
 </body>
